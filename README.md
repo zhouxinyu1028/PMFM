@@ -4,7 +4,6 @@
 ### based on Multimodal Point Cloud Fusion
 
 ![Status](https://img.shields.io/badge/Status-Under%20Review-orange)
-![License](https://img.shields.io/badge/License-TBD-lightgrey)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 
 ---
@@ -47,8 +46,7 @@ Unlike conventional voxel-based multimodal fusion methods, PMFM introduces a **v
 ## 🧠 Network Architecture
 
 The overall architecture of the proposed **PMFM** framework is illustrated in **Figure 1**.  
-The model consists of three core components: the Perspective-based Embedding Module (PEM),  
-the Point Matrix Module (PMM), and the Cross Fusion Module (CFM).
+The model consists of three core components: the Perspective-based Embedding Module (PEM),  the Point Matrix Module (PMM), and the Cross Fusion Module (CFM).
 <img width="1499" height="960" alt="屏幕截图 2026-02-03 202834" src="https://github.com/user-attachments/assets/05b35ea3-75b5-4bc2-8d87-d634bd4e4da2" />
 
 <p align="center">
@@ -85,7 +83,6 @@ segmentation of small and complex organs, particularly in anatomically dense reg
   </em>
 </p>
 
----
 ---
 
 ## 📈 Quantitative Comparison with Mainstream and MICCAI Challenge Methods
