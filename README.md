@@ -1,4 +1,4 @@
-# PMFM: Point-cloud Matrix Fusion Model
+<img width="1705" height="1435" alt="屏幕截图 2026-02-03 213211" src="https://github.com/user-attachments/assets/1c69633d-ebcd-4f8a-8215-f601b58f536d" /># PMFM: Point-cloud Matrix Fusion Model
 
 ## Accurate Full Segmentation of Organs-at-risk in Head and Neck Cancer  
 ### based on Multimodal Point Cloud Fusion
@@ -68,10 +68,8 @@ baseline methods, including nnU-Net, UNet++, and UNet, on head and neck CT slice
 Compared with existing methods, PMFM demonstrates improved boundary consistency and more accurate
 segmentation of small and complex organs, particularly in anatomically dense regions.
 
-<img width="1668" height="1435" alt="屏幕截图 2026-02-03 213211" src="https://github.com/user-attachments/assets/3756b9da-1b5c-46d3-90a2-2cf5f3a2a7b4" />
-
 <p align="center">
-  <img src="figures/qualitative_results.png" width="100%">
+  <img src="figures/qualitative_results_new.png" width="100%">
 </p>
 
 <p align="center">
@@ -80,6 +78,7 @@ segmentation of small and complex organs, particularly in anatomically dense reg
   From left to right: Image, Ground Truth (GT), PMFM, nnU-Net, UNet++, and UNet.
   </em>
 </p>
+
 
 ---
 
