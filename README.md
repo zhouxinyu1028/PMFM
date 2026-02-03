@@ -10,7 +10,6 @@
 
 ## 📢  特别说明
 
-This repository corresponds to a paper that is currently **under review**.  
 本文对应论文正处于**投稿 / 审稿阶段**。
 
 
