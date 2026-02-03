@@ -1,35 +1,42 @@
-# 论文标题（Paper Title）
+# Accurate Full Segmentation of Organs-at-risk in Head and Neck Cancer based on Multimodal Point Cloud Fusion
 
-📄 **论文状态说明**
+## 📄 Paper Status
 
-本仓库对应的论文 **《论文标题》** 目前正在审稿中（Under Review）。  
-在论文正式发表或录用后，**本项目的完整源代码将第一时间在本仓库公开**，以确保研究工作的可复现性与透明性。
+This repository corresponds to the paper:
 
----
+**Accurate Full Segmentation of Organs-at-risk in Head and Neck Cancer based on Multimodal Point Cloud Fusion**
 
-## 📦 源代码与数据说明
+The paper is currently **under review**.
 
-- 论文正式发布后：
-  - 本 GitHub 仓库将更新并公开 **全部源代码**
-  - 同时提供 **百度网盘下载链接**（用于存放数据集、补充材料或大文件）
-
-- 当前阶段：
-  - 源代码与相关资源 **暂不公开**
-  - 如因学术研究、复现实验或其他合理用途有需要，可通过邮件联系作者获取资源
+To ensure the integrity of the peer-review process, the **source code and related resources are not publicly available at this stage**.
 
 ---
 
-## 📬 联系方式
+## 📦 Code & Data Availability
 
-如需提前获取代码或数据，请**邮件说明您的来意、单位及用途**，我们将在合适情况下提供百度网盘链接及访问密码。
+- After the paper is **accepted and officially published**:
+  - The complete source code will be **fully released in this GitHub repository**
+  - A **Baidu Netdisk (百度网盘) link** will be provided for downloading datasets, trained models, and supplementary materials
 
-- 📧 Email: **your_email@example.com**
+- During the review stage:
+  - If you need access to the code or data **for academic or research purposes**, please contact us via email  
+  - Kindly **state your affiliation, purpose, and intended use** in your message  
+  - The Baidu Netdisk link and password will be provided upon reasonable request
 
 ---
 
-## 📌 声明
+## 📬 Contact
 
-本项目仅用于学术研究与交流，请勿将相关内容用于任何商业用途。  
-最终解释权归论文作者所有。
+For inquiries regarding the code or data, please contact:
 
-感谢您的关注与理解！
+📧 **Email:** 20298326349@qq.com
+
+---
+
+## 📌 Notes
+
+- This project is intended **for academic research and non-commercial use only**
+- Please do not redistribute any materials without permission
+- The repository will be updated promptly after paper acceptance
+
+Thank you for your interest in our work!
