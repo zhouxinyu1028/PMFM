@@ -86,6 +86,41 @@ segmentation of small and complex organs, particularly in anatomically dense reg
 </p>
 
 ---
+---
+
+## 📈 Quantitative Comparison with Mainstream and MICCAI Challenge Methods
+
+To further evaluate the effectiveness of the proposed **PMFM** model, we compare it with
+representative **mainstream deep learning methods** and **MICCAI HaN-Seg challenge methods**
+in terms of the average Dice coefficient and the average Hausdorff Distance (HD).
+
+| Methods / Team        | Average Dice (%) | Average HD (mm) |
+|-----------------------|------------------|-----------------|
+| U-Net                 | 68.30            | 3.84            |
+| UNet++                | 64.20            | 7.23            |
+| Attention U-Net       | 72.50            | 3.38            |
+| nnU-Net               | 77.50            | 3.26            |
+| 2D DDPM               | 66.40            | 3.15            |
+| Salmanpour et al.     | 67.70            | 5.42            |
+| Swin U-Net            | 69.50            | 4.38            |
+| UNETR                 | 71.90            | 7.23            |
+| 3D DDPM               | 73.30            | 2.93            |
+| CHB-QuantIF           | 75.10            | 3.70            |
+| UID-Net               | 75.20            | 3.90            |
+| CWLG102               | 76.80            | 3.80            |
+| ELI1                  | 76.90            | 3.50            |
+| Xie et al.            | 77.80            | 3.08            |
+| Ren et al.            | 77.90            | 3.16            |
+| Quetin et al.         | 78.10            | 3.45            |
+| **PMFM (Ours)**       | **79.80**        | **2.47**        |
+
+**Table 1.** Quantitative comparison between the proposed PMFM and mainstream segmentation methods
+(U-Net, UNet++, Attention U-Net, nnU-Net, Swin U-Net, UNETR, and DDPM-based models),
+as well as MICCAI HaN-Seg challenge methods.
+PMFM achieves the **highest average Dice score** and the **lowest average HD**, demonstrating
+superior segmentation accuracy and boundary consistency.
+
+---
 
 ## 🔐 Code & Data Availability
 
