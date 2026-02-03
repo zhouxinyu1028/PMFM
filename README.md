@@ -94,6 +94,8 @@ To further evaluate the effectiveness of the proposed **PMFM** model, we compare
 representative **mainstream deep learning methods** and **MICCAI HaN-Seg challenge methods**
 in terms of the average Dice coefficient and the average Hausdorff Distance (HD).
 
+<div align="center">
+
 | Methods / Team        | Average Dice (%) | Average HD (mm) |
 |-----------------------|------------------|-----------------|
 | U-Net                 | 68.30            | 3.84            |
@@ -113,6 +115,9 @@ in terms of the average Dice coefficient and the average Hausdorff Distance (HD)
 | Ren et al.            | 77.90            | 3.16            |
 | Quetin et al.         | 78.10            | 3.45            |
 | **PMFM (Ours)**       | **79.80**        | **2.47**        |
+
+</div>
+
 
 **Table 1.** Quantitative comparison between the proposed PMFM and mainstream segmentation methods
 (U-Net, UNet++, Attention U-Net, nnU-Net, Swin U-Net, UNETR, and DDPM-based models),
