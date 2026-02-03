@@ -28,7 +28,7 @@ Unlike conventional voxel-based multimodal fusion methods, PMFM introduces a **v
 ### Key Contributions
 
 - **Virtual Point Cloud Representation**  
-  Maps multimodal CT and MRI features into a unified point cloud space to recover latent 3D spatial relationships.
+  Maps multimodal CT and MR features into a unified point cloud space to recover latent 3D spatial relationships.
 
 - **Point Matrix Module (PMM)**  
   Employs PointNet-based global modeling to enhance cross-modality and cross-organ semantic associations.
