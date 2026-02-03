@@ -68,7 +68,7 @@ baseline methods, including nnU-Net, UNet++, and UNet, on head and neck CT slice
 Compared with existing methods, PMFM demonstrates improved boundary consistency and more accurate
 segmentation of small and complex organs, particularly in anatomically dense regions.
 
-<img width="1668" height="1435" alt="屏幕截图 2026-02-03 202217" src="https://github.com/user-attachments/assets/3756b9da-1b5c-46d3-90a2-2cf5f3a2a7b4" />
+<img width="1668" height="1435" alt="屏幕截图 2026-02-03 213211" src="https://github.com/user-attachments/assets/3756b9da-1b5c-46d3-90a2-2cf5f3a2a7b4" />
 
 <p align="center">
   <img src="figures/qualitative_results.png" width="100%">
