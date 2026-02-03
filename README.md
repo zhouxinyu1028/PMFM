@@ -49,10 +49,12 @@ Unlike conventional voxel-based multimodal fusion methods, PMFM introduces a **v
 The overall architecture of the proposed **PMFM** framework is illustrated in **Figure 1**.  
 The model consists of three core components: the Perspective-based Embedding Module (PEM),  
 the Point Matrix Module (PMM), and the Cross Fusion Module (CFM).
+<img width="1499" height="960" alt="屏幕截图 2026-02-03 202834" src="https://github.com/user-attachments/assets/05b35ea3-75b5-4bc2-8d87-d634bd4e4da2" />
 
 <p align="center">
   <img src="figures/network_structure.png" width="100%">
 </p>
+![Uploading 屏幕截图 2026-02-03 202217.png…]()
 
 <p align="center">
   <em>
