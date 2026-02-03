@@ -137,8 +137,7 @@ superior segmentation accuracy and boundary consistency.
 
 1. **Request access by email**
 
-   Please send an email with the subject:  
-   **“Request for PMFM Code”**
+   Please send an email with the subject:  **“Request for PMFM Code”**
 
    The email should briefly include:
    - Your name and affiliation
@@ -156,9 +155,6 @@ superior segmentation accuracy and boundary consistency.
 
 - Python ≥ 3.8  
 - PyTorch ≥ 1.10  
-- NumPy  
-- SciPy  
-- scikit-learn  
 
 (Additional dependencies will be listed after code release.)
 
