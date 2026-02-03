@@ -8,12 +8,11 @@
 
 ---
 
-## 📢 Important Notice / 特别说明
+## 📢  特别说明
 
 This repository corresponds to a paper that is currently **under review**.  
 本文对应论文正处于**投稿 / 审稿阶段**。
 
-To comply with the peer-review policy, the **source code and related resources are not publicly released at this stage**.
 
 ---
 
