@@ -8,10 +8,6 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ---
 
-## 📢  说明
-
-本论文已被**接收**。
-
 
 ---
 
