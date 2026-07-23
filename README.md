@@ -6,7 +6,14 @@
 ![Status](https://img.shields.io/badge/Status-Under%20Review-orange)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 
+---
 
+## 📢  说明
+
+本论文已被**接收**。
+
+
+---
 
 ## 📘 Introduction
 
@@ -117,12 +124,14 @@ superior segmentation accuracy and boundary consistency.
 ## 🔐 Code & Data Availability
 
 - **After paper acceptance**
-  - The complete source code will be **fully released in this repository**
-  - A **Baidu Netdisk (百度网盘)** link will be provided for datasets, trained models, and supplementary materials
+  - The complete source code has been released in this repository.
+  - The datasets, trained models, and supplementary materials are available through a **Baidu Netdisk (百度网盘)** link upon request.
+  - Researchers interested in accessing the data and models may contact the authors for the download link.
 
-- **During the review stage**
-  - Due to copyright and the ongoing peer-review process, the code is currently **password-protected**
-  - Access can be granted **for peer review or academic research purposes only**
+- **Access Policy**
+  - The provided code, datasets, and models are intended for academic research purposes only.
+  - Any use of the released resources should appropriately acknowledge this work.
+
 
 ### Access Procedure
 
