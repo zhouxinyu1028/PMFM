@@ -6,14 +6,7 @@
 ![Status](https://img.shields.io/badge/Status-Under%20Review-orange)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 
----
 
-## 📢  特别说明
-
-本文对应论文正处于**投稿 / 审稿阶段**。
-
-
----
 
 ## 📘 Introduction
 
