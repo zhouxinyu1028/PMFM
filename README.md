@@ -6,6 +6,8 @@
 ![Status](https://img.shields.io/badge/Status-Under%20Review-orange)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 
+![Status](https://img.shields.io/badge/Status-Published-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ---
 
 ## 📢  说明
