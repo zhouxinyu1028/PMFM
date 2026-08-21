@@ -243,7 +243,7 @@ Run:
 
 
 ```bash
-python train.py --config config/hanseg.yaml
+python trainNanSegV4.py
 ```
 
 
@@ -253,11 +253,21 @@ python train.py --config config/hanseg.yaml
 ## 3. Evaluation
 
 
-Run:
+The evaluation metrics are implemented in:
+
+loss/
+└── metrics.py
+
+The evaluation includes:
 
 
-```bash
-python test.py --config config/hanseg.yaml
+- Dice coefficient (Dice)
+- Hausdorff distance (HD)
+
+
+The trained model can be evaluated using the provided evaluation functions.
+The evaluation settings can be modified according to the experimental
+requirements.
 ```
 
 
