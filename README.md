@@ -273,34 +273,34 @@ The evaluation settings can be modified according to the experimental requiremen
 # 📂 Repository Structure
 
 
-```
+```text
 PMFM
 │
 ├── config
-│ └── nanseg.yaml
+│   └── nanseg.yaml
 │
 ├── datasets
-│ └── nanseg
-│ ├── images
-│ └── labels
+│   └── nanseg
+│       ├── images
+│       └── labels
 │
 ├── loss
-│ ├── loss.py
-│ ├── metrics.py
-│ └── init.py
+│   ├── loss.py
+│   ├── metrics.py
+│   └── __init__.py
 │
 ├── model
-│ ├── PFF.py
-│ ├── PFFUNet.py
-│ ├── pointnet.py
-│ ├── unet2d.py
-│ ├── builder_model.py
-│ └── init.py
+│   ├── PFF.py
+│   ├── PFFUNet.py
+│   ├── pointnet.py
+│   ├── unet2d.py
+│   ├── builder_model.py
+│   └── __init__.py
 │
 ├── optimizer
-│ ├── builder_optimizer.py
-│ ├── builder_lr_scheduler.py
-│ └── init.py
+│   ├── builder_optimizer.py
+│   ├── builder_lr_scheduler.py
+│   └── __init__.py
 │
 ├── utils
 │
