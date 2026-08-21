@@ -4,13 +4,13 @@
 ### based on Multimodal Point Cloud Fusion
 
 
-![Status](https://img.shields.io/badge/Status-Published-brightgreen)
+![Status](https://img.shields.io/badge/Status-Code%20Released-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 
 
 ---
 
-## 📘 Introduction
+# 📘 Introduction
 
 This repository corresponds to the paper:
 
@@ -18,72 +18,101 @@ This repository corresponds to the paper:
 
 We propose **PMFM**, a novel **Point-cloud Matrix Fusion Model** for accurate and robust segmentation of organs-at-risk (OARs) in head and neck cancer radiotherapy planning.
 
-Unlike conventional voxel-based multimodal fusion methods, PMFM introduces a **virtual point cloud representation** to recover latent three-dimensional anatomical relationships while maintaining the computational efficiency of two-dimensional networks. By performing modality–organ decoupling and global modeling in the point cloud space, PMFM effectively alleviates feature entanglement and improves segmentation robustness in complex multimodal, multi-organ scenarios.
+Unlike conventional voxel-based multimodal fusion methods, PMFM introduces a **virtual point cloud representation** to recover latent three-dimensional anatomical relationships while maintaining the computational efficiency of two-dimensional networks.
 
-### Key Contributions
+By performing modality–organ decoupling and global modeling in the point cloud space, PMFM effectively alleviates feature entanglement and improves segmentation robustness in complex multimodal, multi-organ scenarios.
 
-- **Virtual Point Cloud Representation**  
+
+## Key Contributions
+
+- **Virtual Point Cloud Representation**
+
   Maps multimodal CT and MR features into a unified point cloud space to recover latent 3D spatial relationships.
 
-- **Point Matrix Module (PMM)**  
+- **Point Matrix Module (PMM)**
+
   Employs PointNet-based global modeling to enhance cross-modality and cross-organ semantic associations.
 
-- **Cross Fusion Module (CFM)**  
+- **Cross Fusion Module (CFM)**
+
   Achieves deep inter-modal fusion and improves boundary consistency for complex OAR structures.
 
-- **State-of-the-art Performance**  
-  Validated on the HaN-Seg dataset, achieving superior Dice and Hausdorff distance compared with existing methods.
+- **State-of-the-art Performance**
+
+  Validated on the HaN-Seg dataset, achieving superior Dice coefficient and Hausdorff distance compared with existing methods.
+
+
 
 ---
 
-## 🧠 Network Architecture
+# 🧠 Network Architecture
 
-The overall architecture of the proposed **PMFM** framework is illustrated in **Figure 1**.  
-The model consists of three core components: the Perspective-based Embedding Module (PEM),  the Point Matrix Module (PMM), and the Cross Fusion Module (CFM).
-<img width="1499" height="960" alt="屏幕截图 2026-02-03 202834" src="https://github.com/user-attachments/assets/05b35ea3-75b5-4bc2-8d87-d634bd4e4da2" />
+The overall architecture of the proposed **PMFM** framework is illustrated in Figure 1.
+
+The model consists of three core components:
+
+- Perspective-based Embedding Module (PEM)
+- Point Matrix Module (PMM)
+- Cross Fusion Module (CFM)
+
+
+<img width="1499" height="960" alt="Network Architecture" src="https://github.com/user-attachments/assets/05b35ea3-75b5-4bc2-8d87-d634bd4e4da2" />
+
 
 <p align="center">
   <img src="figures/network_structure.png" width="100%">
 </p>
 
-<p align="center">
-  <em>
-  <b>Figure 1.</b> Overall architecture of the proposed PMFM framework, including the U-Net backbone,
-  PEM, PMM, and CFM modules for multimodal point cloud fusion.
-  </em>
-</p>
-
----
-
-## 📊 Qualitative Results
-
-**Figure 2** presents qualitative comparisons between the proposed **PMFM** and representative
-baseline methods, including nnU-Net, UNet++, and UNet, on head and neck CT slices.
-
-Compared with existing methods, PMFM demonstrates improved boundary consistency and more accurate
-segmentation of small and complex organs, particularly in anatomically dense regions.
-<img width="1705" height="1435" alt="屏幕截图 2026-02-03 213211" src="https://github.com/user-attachments/assets/1c69633d-ebcd-4f8a-8215-f601b58f536d" />
-<p align="center">
-  <img src="figures/qualitative_results_new.png" width="100%">
-</p>
 
 <p align="center">
-  <em>
-  <b>Figure 2.</b> Qualitative comparison of segmentation results.
-  From left to right: Image, Ground Truth (GT), PMFM, nnU-Net, UNet++, and UNet.
-  </em>
+<b>Figure 1.</b>
+Overall architecture of the proposed PMFM framework, including the U-Net backbone,
+PEM, PMM, and CFM modules for multimodal point cloud fusion.
 </p>
+
 
 
 ---
 
-## 📈 Quantitative Comparison with Mainstream and MICCAI Challenge Methods
+# 📊 Qualitative Results
 
-To further evaluate the effectiveness of the proposed **PMFM** model, we compare it with
-representative **mainstream deep learning methods** and **MICCAI HaN-Seg challenge methods**
-in terms of the average Dice coefficient and the average Hausdorff Distance (HD).
+Figure 2 presents qualitative comparisons between the proposed **PMFM**
+and representative baseline methods, including nnU-Net, UNet++, and UNet,
+on head and neck CT slices.
+
+Compared with existing methods, PMFM demonstrates improved boundary consistency
+and more accurate segmentation of small and complex organs, particularly in
+anatomically dense regions.
+
+
+<img width="1705" height="1435" alt="Qualitative Results" src="https://github.com/user-attachments/assets/1c69633d-ebcd-4f8a-8215-f601b58f536d" />
+
+
+<p align="center">
+<img src="figures/qualitative_results_new.png" width="100%">
+</p>
+
+
+<p align="center">
+<b>Figure 2.</b>
+Qualitative comparison of segmentation results.
+From left to right:
+Image, Ground Truth (GT), PMFM, nnU-Net, UNet++, and UNet.
+</p>
+
+
+
+---
+
+# 📈 Quantitative Comparison with Mainstream and MICCAI Challenge Methods
+
+
+To further evaluate the effectiveness of PMFM,
+we compare it with representative mainstream deep learning methods
+and MICCAI HaN-Seg challenge methods.
 
 <div align="center">
+
 
 | Methods / Team        | Average Dice (%) | Average HD (mm) |
 |-----------------------|------------------|-----------------|
@@ -108,57 +137,202 @@ in terms of the average Dice coefficient and the average Hausdorff Distance (HD)
 </div>
 
 
-**Table 1.** Quantitative comparison between the proposed PMFM and mainstream segmentation methods
-(U-Net, UNet++, Attention U-Net, nnU-Net, Swin U-Net, UNETR, and DDPM-based models),
+**Table 1.**
+Quantitative comparison between PMFM and mainstream segmentation methods
 as well as MICCAI HaN-Seg challenge methods.
-PMFM achieves the **highest average Dice score** and the **lowest average HD**, demonstrating
-superior segmentation accuracy and boundary consistency.
+
+PMFM achieves the highest average Dice score and the lowest average HD,
+demonstrating superior segmentation accuracy and boundary consistency.
+
+
 
 ---
 
-## 🔐 Code & Data Availability
-
-- **After paper acceptance**
-  - The complete source code has been released in this repository.
-  - The datasets, trained models, and supplementary materials are available through a **Baidu Netdisk (百度网盘)** link upon request.
-  - Researchers interested in accessing the data and models may contact the authors for the download link.
-
-- **Access Policy**
-  - The provided code, datasets, and models are intended for academic research purposes only.
-  - Any use of the released resources should appropriately acknowledge this work.
+# 🔐 Code & Data Availability
 
 
-### Access Procedure
+The source code of **PMFM** has been publicly released in this repository.
 
-1. **Request access by email**
 
-   Please send an email with the subject:  **“Request for PMFM Code”**
+The released implementation includes:
 
-   The email should briefly include:
-   - Your name and affiliation
-   - Purpose of use (e.g., peer review, academic research)
 
-2. **Contact Email**
+- Perspective-based Embedding Module (PEM)
+- Point Matrix Module (PMM)
+- Cross Fusion Module (CFM)
+- Network construction
+- Loss functions
+- Training and evaluation pipeline
 
-   📧 **20298326349@qq.com**
 
-   The Baidu Netdisk link and extraction code will be provided upon reasonable request.
+
+## Dataset
+
+
+Experiments are conducted on the **HaN-Seg dataset**.
+
+
+Due to dataset license restrictions,
+the original medical images are not redistributed in this repository.
+
+
+Researchers should obtain the dataset from the official HaN-Seg challenge platform
+and follow the corresponding access policy.
+
+
+
+## Pre-trained Models
+
+
+The pretrained weights are not included in the current release.
+
+
+Researchers who require pretrained models for reproduction or comparison
+may contact:
+
+
+📧 **20298326349@qq.com**
+
+
 
 ---
 
-## 🧩 Requirements
+# 🧩 Requirements
 
-- Python ≥ 3.8  
-- PyTorch ≥ 1.10  
 
-(Additional dependencies will be listed after code release.)
+- Python ≥ 3.8
+- PyTorch ≥ 1.10
+
+
+Install dependencies:
+
+
+```bash
+pip install -r requirements.txt
+```
+
+
 
 ---
 
-## 📌 Notes
+# 🚀 Usage
 
-- This project is intended **for academic research and non-commercial use only**
-- Redistribution of the code or data without permission is prohibited
-- The repository will be updated promptly after paper acceptance
+
+## 1. Dataset Preparation
+
+
+Prepare the HaN-Seg dataset:
+
+
+```
+datasets/
+└── hanseg/
+    ├── images/
+    └── labels/
+```
+
+
+Modify the dataset path in:
+
+
+```
+config/hanseg.yaml
+```
+
+
+
+---
+
+## 2. Training
+
+
+Run:
+
+
+```bash
+python train.py --config config/hanseg.yaml
+```
+
+
+
+---
+
+## 3. Evaluation
+
+
+Run:
+
+
+```bash
+python test.py --config config/hanseg.yaml
+```
+
+
+
+---
+
+# 📂 Repository Structure
+
+
+```
+PMFM
+│
+├── config
+│   └── hanseg.yaml
+│
+├── datasets
+│
+├── loss
+│
+├── model
+│   ├── CFM.py
+│   ├── PMFM.py
+│   ├── pointnet.py
+│   └── unet2d.py
+│
+├── utils
+│
+├── train.py
+├── test.py
+├── requirements.txt
+│
+└── README.md
+
+```
+
+
+
+---
+
+# 📌 Notes
+
+
+- This project is released for academic research and non-commercial use only.
+- Redistribution of the dataset is prohibited.
+- Please cite our work when using this code.
+- Issues and suggestions are welcome.
+
+
+
+---
+
+# 📚 Citation
+
+
+If you use this repository in your research,
+please cite:
+
+
+```bibtex
+@article{
+PMFM,
+title={Accurate Full Segmentation of Organs-at-risk in Head and Neck Cancer based on Multimodal Point Cloud Fusion},
+author={},
+journal={},
+year={}
+}
+```
+
+
 
 Thank you for your interest in our work!
