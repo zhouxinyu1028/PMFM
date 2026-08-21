@@ -9,7 +9,6 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-1.10%2B-orange)
 
 
-
 ---
 
 # 📘 Introduction
@@ -25,17 +24,21 @@ a novel multimodal segmentation framework for accurate and robust
 organs-at-risk (OARs) segmentation in head and neck cancer radiotherapy planning.
 
 
-Unlike conventional voxel-based multimodal fusion strategies,
-PMFM introduces a **virtual point cloud representation** to model
-latent three-dimensional anatomical relationships while maintaining
-the computational efficiency of 2D convolutional networks.
+Conventional multimodal medical image segmentation methods usually perform
+feature fusion directly in voxel space, which may lead to severe feature
+entanglement between different imaging modalities and anatomical structures.
 
 
-By performing modality–organ decoupling and global semantic modeling
-in point cloud space, PMFM effectively reduces feature entanglement
-and improves segmentation performance in complex multimodal and
-multi-organ scenarios.
+To address this problem, PMFM introduces a **virtual point cloud representation**
+to transform multimodal feature maps into a unified point-based space.
+This representation enables the model to capture latent three-dimensional
+spatial relationships while maintaining the computational efficiency of
+two-dimensional segmentation networks.
 
+
+By performing modality–organ decoupling and global semantic interaction
+in point cloud space, PMFM effectively improves segmentation accuracy,
+boundary consistency, and robustness for complex multi-organ scenarios.
 
 
 ---
@@ -45,28 +48,52 @@ multi-organ scenarios.
 
 ## 1. Virtual Point Cloud Representation
 
-PMFM maps multimodal CT/MR feature representations into a unified
-point cloud space to capture latent 3D anatomical structures.
 
+PMFM introduces a virtual point cloud representation that maps multimodal
+features into a unified geometric space.
+
+
+This strategy enables:
+
+- implicit 3D anatomical relationship modeling
+- global feature interaction
+- reduced modality interference
+
+
+---
 
 ## 2. Point Matrix Module (PMM)
 
-A PointNet-based global modeling strategy is introduced to enhance
-cross-modality and cross-organ semantic interaction.
 
+The Point Matrix Module employs PointNet-based global modeling to establish
+semantic relationships between:
+
+- different imaging modalities
+- different organs
+- local and global anatomical structures
+
+
+---
 
 ## 3. Cross Fusion Module (CFM)
 
-A feature fusion mechanism is designed to improve boundary consistency
-and structural representation of small and complex organs.
 
+The Cross Fusion Module performs deep multimodal feature interaction and
+enhances:
+
+- organ boundary representation
+- structural consistency
+- segmentation robustness
+
+
+---
 
 ## 4. Superior Segmentation Performance
 
-PMFM achieves competitive performance on the HaN-Seg dataset,
-with improved Dice coefficient and Hausdorff distance compared with
-existing methods.
 
+PMFM achieves state-of-the-art performance on the HaN-Seg dataset,
+obtaining higher Dice scores and lower Hausdorff distances compared with
+mainstream segmentation methods and MICCAI challenge approaches.
 
 
 ---
@@ -76,10 +103,12 @@ existing methods.
 
 The proposed PMFM framework consists of:
 
-- Perspective-based Feature Embedding
-- Point Matrix Modeling
-- Point-cloud Feature Fusion
-- U-Net based segmentation decoder
+
+- U-Net based segmentation backbone
+- Perspective Feature Fusion module
+- Point Matrix Module
+- Point-cloud feature interaction
+- Multimodal fusion decoder
 
 
 <p align="center">
@@ -88,8 +117,7 @@ The proposed PMFM framework consists of:
 
 
 **Figure 1.**
-Overall architecture of PMFM, including feature embedding,
-point matrix modeling, point cloud fusion and segmentation network.
+Overall architecture of PMFM framework.
 
 
 
@@ -98,8 +126,19 @@ point matrix modeling, point cloud fusion and segmentation network.
 # 📊 Qualitative Results
 
 
-PMFM provides more accurate segmentation results compared with
-representative methods including U-Net, UNet++, and nnU-Net.
+PMFM demonstrates improved segmentation accuracy compared with representative
+methods including:
+
+- U-Net
+- UNet++
+- nnU-Net
+
+
+especially for:
+
+- small organs
+- irregular anatomical structures
+- complex boundaries
 
 
 <p align="center">
@@ -109,10 +148,10 @@ representative methods including U-Net, UNet++, and nnU-Net.
 
 **Figure 2.**
 Qualitative comparison of segmentation results.
+
 From left to right:
 
 Image, Ground Truth, PMFM, nnU-Net, UNet++, and U-Net.
-
 
 
 ---
@@ -120,35 +159,39 @@ Image, Ground Truth, PMFM, nnU-Net, UNet++, and U-Net.
 # 📈 Quantitative Comparison
 
 
-| Methods / Team | Average Dice (%) | Average HD (mm) |
+| Method | Average Dice (%) | Average HD (mm) |
 |---|---:|---:|
 | U-Net | 68.30 | 3.84 |
 | UNet++ | 64.20 | 7.23 |
 | Attention U-Net | 72.50 | 3.38 |
 | nnU-Net | 77.50 | 3.26 |
+| 2D DDPM | 66.40 | 3.15 |
+| Swin U-Net | 69.50 | 4.38 |
 | UNETR | 71.90 | 7.23 |
 | 3D DDPM | 73.30 | 2.93 |
+| CHB-QuantIF | 75.10 | 3.70 |
+| UID-Net | 75.20 | 3.90 |
+| CWLG102 | 76.80 | 3.80 |
+| ELI1 | 76.90 | 3.50 |
 | Xie et al. | 77.80 | 3.08 |
 | Ren et al. | 77.90 | 3.16 |
 | Quetin et al. | 78.10 | 3.45 |
 | **PMFM (Ours)** | **79.80** | **2.47** |
 
 
-PMFM achieves the highest average Dice score and the lowest Hausdorff
-distance, demonstrating improved segmentation accuracy and boundary
-consistency.
-
+PMFM achieves the highest average Dice score and the lowest average HD,
+demonstrating superior segmentation accuracy and boundary consistency.
 
 
 ---
 
-# 🔐 Code & Data Availability
+# 🔐 Code Availability
 
 
-The complete source code of **PMFM** has been publicly released.
+The source code of **PMFM** has been publicly released in this repository.
 
 
-The released implementation contains:
+The released implementation includes:
 
 
 - Perspective Feature Fusion module
@@ -160,6 +203,32 @@ The released implementation contains:
 - Training pipeline
 
 
+Project repository:
+https://github.com/your_username/PMFM
 
-The code is available at:
+
+(Replace the above URL with your official GitHub address.)
+
+
+
+---
+
+# 📂 Dataset
+
+
+Experiments are conducted on the:
+
+**HaN-Seg dataset**
+
+
+Due to dataset license restrictions,
+the original medical images are not redistributed.
+
+
+Researchers should obtain the dataset from the official HaN-Seg challenge
+platform and follow the corresponding access policy.
+
+
+
+The expected dataset organization is:
 
