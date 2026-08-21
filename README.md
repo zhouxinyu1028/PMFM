@@ -4,12 +4,12 @@
 ### based on Multimodal Point Cloud Fusion
 
 
-![Status](https://img.shields.io/badge/Status-Code%20Released-blue)
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![PyTorch](https://img.shields.io/badge/PyTorch-1.10%2B-orange)
-![Dataset](https://img.shields.io/badge/Dataset-HaN--Seg-red)
-![Task](https://img.shields.io/badge/Task-Medical%20Image%20Segmentation-purple)
-![Framework](https://img.shields.io/badge/Framework-PyTorch-yellow)
+![Status](https://img.shields.io/badge/Status-Code%20Released-007ec6)
+![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB)
+![PyTorch](https://img.shields.io/badge/PyTorch-1.10%2B-EE4C2C)
+![Dataset](https://img.shields.io/badge/Dataset-HaN--Seg-8A2BE2)
+![Task](https://img.shields.io/badge/Task-Medical%20Image%20Segmentation-2E8B57)
+![Framework](https://img.shields.io/badge/Framework-PyTorch-F7DF1E)
 
 
 ---
