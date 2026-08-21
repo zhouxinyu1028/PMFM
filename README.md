@@ -118,7 +118,7 @@ and MICCAI HaN-Seg challenge methods.
 <div align="center">
 
 
-| Methods / Team        | Average Dice (%) | Average HD (mm) |
+| Methods / Team        | Average Dice (%) | Average HD95 (mm) |
 |-----------------------|------------------|-----------------|
 | U-Net                 | 68.30            | 3.84            |
 | UNet++                | 64.20            | 7.23            |
