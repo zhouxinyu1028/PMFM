@@ -7,8 +7,6 @@
 ![Status](https://img.shields.io/badge/Status-Code%20Released-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-1.10%2B-orange)
-![CUDA](https://img.shields.io/badge/CUDA-11.3%2B-green)
-![License](https://img.shields.io/badge/License-Academic%20Research-lightgrey)
 ![Dataset](https://img.shields.io/badge/Dataset-HaN--Seg-red)
 ![Task](https://img.shields.io/badge/Task-Medical%20Image%20Segmentation-purple)
 ![Framework](https://img.shields.io/badge/Framework-PyTorch-yellow)
