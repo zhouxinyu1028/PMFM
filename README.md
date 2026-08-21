@@ -204,31 +204,4 @@ The released implementation includes:
 
 
 Project repository:
-https://github.com/your_username/PMFM
-
-
-(Replace the above URL with your official GitHub address.)
-
-
-
----
-
-# 📂 Dataset
-
-
-Experiments are conducted on the:
-
-**HaN-Seg dataset**
-
-
-Due to dataset license restrictions,
-the original medical images are not redistributed.
-
-
-Researchers should obtain the dataset from the official HaN-Seg challenge
-platform and follow the corresponding access policy.
-
-
-
-The expected dataset organization is:
 
