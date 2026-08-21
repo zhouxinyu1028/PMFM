@@ -259,14 +259,12 @@ loss/
 
 The evaluation includes:
 
+Dice coefficient (Dice)
 
-- Dice coefficient (Dice)
-- Hausdorff distance (HD)
-
+95% Hausdorff distance (HD95)
 
 The trained model can be evaluated using the provided evaluation functions.
-The evaluation settings can be modified according to the experimental
-requirements.
+The evaluation settings can be modified according to the experimental requirements.
 ```
 
 
