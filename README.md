@@ -145,7 +145,7 @@ and MICCAI HaN-Seg challenge methods.
 Quantitative comparison between PMFM and mainstream segmentation methods
 as well as MICCAI HaN-Seg challenge methods.
 
-PMFM achieves the highest average Dice score and the lowest average HD,
+PMFM achieves the highest average Dice score and the lowest average HD95,
 demonstrating superior segmentation accuracy and boundary consistency.
 
 
@@ -254,14 +254,19 @@ python trainNanSegV4.py
 
 The evaluation metrics are implemented in:
 
+
+```text
 loss/
 └── metrics.py
+```
+
 
 The evaluation includes:
 
-Dice coefficient (Dice)
 
-95% Hausdorff distance (HD95)
+- Dice coefficient (Dice)
+- 95% Hausdorff distance (HD95)
+
 
 The trained model can be evaluated using the provided evaluation functions.
 The evaluation settings can be modified according to the experimental requirements.
