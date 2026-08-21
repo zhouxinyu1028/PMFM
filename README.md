@@ -247,7 +247,6 @@ python trainNanSegV4.py
 ```
 
 
-
 ---
 
 ## 3. Evaluation
@@ -269,7 +268,6 @@ The trained model can be evaluated using the provided evaluation functions.
 The evaluation settings can be modified according to the experimental
 requirements.
 ```
-
 
 
 ---
