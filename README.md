@@ -181,17 +181,6 @@ and follow the corresponding access policy.
 
 
 
-## Pre-trained Models
-
-
-The pretrained weights are not included in the current release.
-
-
-Researchers who require pretrained models for reproduction or comparison
-may contact:
-
-
-📧 **20298326349@qq.com**
 
 
 
