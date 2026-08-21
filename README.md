@@ -308,17 +308,20 @@ PMFM
 # 📚 Citation
 
 
-If you use this repository in your research,
-please cite:
+If you use this code or model in your research,
+please cite our paper:
 
 
 ```bibtex
-@article{
-PMFM,
-title={Accurate Full Segmentation of Organs-at-risk in Head and Neck Cancer based on Multimodal Point Cloud Fusion},
-author={},
-journal={},
-year={}
+@article{xu2026pmfm,
+  title={Accurate full segmentation of organs-at-risk in head and neck cancer based on multimodal point cloud fusion},
+  author={Xu, Pengfei and Zhou, Xinyu and Wang, Jie and Liu, Xianyi and Liu, Jinping and Li, Jinxiu and Duan, Xiaohui},
+  journal={Medical Image Analysis},
+  volume={113},
+  pages={104185},
+  year={2026},
+  publisher={Elsevier},
+  doi={10.1016/j.media.2026.104185}
 }
 ```
 
