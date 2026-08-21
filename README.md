@@ -43,7 +43,7 @@ By performing modality–organ decoupling and global modeling in the point cloud
 
 - **State-of-the-art Performance**
 
-  Validated on the HaN-Seg dataset, achieving superior Dice coefficient and Hausdorff distance compared with existing methods.
+  Validated on the HaN-Seg dataset, achieving superior Dice coefficient and 95% Hausdorff distance (HD95) compared with existing methods.
 
 
 
