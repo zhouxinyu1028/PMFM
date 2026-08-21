@@ -1,0 +1,53 @@
+checkpoint:
+  save:
+    save_dir: weight/nanseg
+    is_save_checkpoint: False
+  load:
+    load_dir: weight/nanseg/latest_model.pth
+    is_load_checkpoint: False
+model:
+  backbone:
+    name: UNet
+    in_channels: 1
+    num_classes: 30
+    pointnet: True
+    isGroupNorm: True
+    num_gropus: 32
+    is_point: True
+  fusion:
+    name: CFM
+    num_classes: 30
+    isGroupNorm: True
+    num_gropus: 32
+data:
+  train:
+    datas_dir: C:\Users\Administrator\Desktop\Datasets\_SI\train
+  val:
+    datas_dir: C:\Users\Administrator\Desktop\Datasets\_SI\val
+  test:
+    images_dir: C:\Users\Administrator\Desktop\Datasets\_SI\test\train
+    seg_dir: C:\Users\Administrator\Desktop\Datasets\_SI\test\val
+  transforms:
+    Crop_w: 128
+    Crop_h: 128
+schedule:
+  optimizer_unet:
+    name: AdamW
+    lr: 0.0001
+    weight_decay: 0.5
+  optimizer_cfm:
+    name: AdamW
+    lr: 0.001
+    weight_decay: 0.5
+  total_epochs: 200
+  batch_size: 1
+  lr_scheduler:
+    mode: max
+    patience: 5
+    threshold: 0.0001
+other:
+  is_print_image: False
+labels: ['A_Carotid_L', 'A_Carotid_R', 'Arytenoid', 'Bone_Mandible', 'Brainstem', 'BuccalMucosa', 'Cavity_Oral', 'Cochlea_L',
+         'Cochlea_R', 'Cricopharyngeus', 'Esophagus_S', 'Eye_AL', 'Eye_AR', 'Eye_PL', 'Eye_PR', 'Glnd_Lacrimal_L', 'Glnd_Lacrimal_R',
+        'Glnd_Submand_L', 'Glnd_Submand_R', 'Glnd_Thyroid', 'Glottis', 'Larynx_SG', 'Lips', 'OpticChiasm', 'OpticNrv_L', 'OpticNrv_R',
+         'Parotid_L', 'Parotid_R', 'Pituitary', 'SpinalCord']
