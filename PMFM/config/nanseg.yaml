@@ -1,0 +1,128 @@
+evaluation:
+  checkpoint_epoch: 38
+checkpoint:
+  save:
+    save_dir: runs/pmfm
+    is_save_checkpoint: true
+  load:
+    auto_resume: false
+    load_dir: weights/latest_model.pth
+    is_load_checkpoint: false
+    is_load_optimizer: true
+model:
+  backbone:
+    name: UNet
+    in_channels: 1
+    num_classes: 30
+    trilinear: true
+    batch_normal: true
+    base_c: 64
+    pointnet: true
+    isGroupNorm: true
+    num_gropus: 32
+    is_point: true
+  fusion:
+    name: PFF
+    num_classes: 30
+    isGroupNorm: true
+    num_gropus: 32
+  discriminator:
+    name: Discriminator
+    in_channels: 1
+    isGroupNorm: true
+    num_gropus: 32
+data:
+  num_workers: 0
+  k_fold:
+    datas_dir: data/train
+  train:
+    datas_dir: data/train
+  val:
+    datas_dir: data/val
+  test:
+    datas_dir: data/test
+  transforms:
+    Crop_w: 128
+    Crop_h: 128
+    step: 1
+    eq_cnt: 20
+    crop_size: 64
+    scale: 2
+schedule:
+  optimizer_unet:
+    name: AdamW
+    lr: 0.0001
+    momentum: 0.9
+    weight_decay: 0.5
+  optimizer_pff:
+    name: AdamW
+    lr: 0.0001
+    momentum: 0.9
+    weight_decay: 0.5
+  optimizer_d:
+    name: AdamW
+    lr: 0.0001
+    momentum: 0.9
+    weight_decay: 0.5
+  total_epochs: 1000
+  batch_size: 1
+  lr_scheduler:
+    name: ReduceLROnPlateau
+    T_max: 300
+    eta_min: 5.0e-05
+    mode: max
+    patience: 5
+    threshold: 0.0001
+other:
+  seed: 42
+  wandb_project: SI-NanSeg
+  wandb_mode: offline
+  val_every_epochs: 2
+  compute_hd_asd: false
+  empty_cache_every: 50
+  is_print_image: false
+  wandb_name: pmfm_hanseg
+loss:
+  alpha:
+  - 0.25
+  - 0.25
+  - 0.5
+  focal_alpha:
+  - 0.2
+  - 0.8
+  focal_gamma: 2
+labels:
+- A_Carotid_L
+- A_Carotid_R
+- Arytenoid
+- Bone_Mandible
+- Brainstem
+- BuccalMucosa
+- Cavity_Oral
+- Cochlea_L
+- Cochlea_R
+- Cricopharyngeus
+- Esophagus_S
+- Eye_AL
+- Eye_AR
+- Eye_PL
+- Eye_PR
+- Glnd_Lacrimal_L
+- Glnd_Lacrimal_R
+- Glnd_Submand_L
+- Glnd_Submand_R
+- Glnd_Thyroid
+- Glottis
+- Larynx_SG
+- Lips
+- OpticChiasm
+- OpticNrv_L
+- OpticNrv_R
+- Parotid_L
+- Parotid_R
+- Pituitary
+- SpinalCord
+other_rescue:
+  resume_lr: 0.0
+  resume_epochs: 5
+
