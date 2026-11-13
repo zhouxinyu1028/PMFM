@@ -60,12 +60,13 @@ The model consists of three core components:
 - Cross Fusion Module (CFM)
 
 
-<img width="1499" height="960" alt="Network Architecture" src="https://github.com/user-attachments/assets/05b35ea3-75b5-4bc2-8d87-d634bd4e4da2" />
+
 
 
 <p align="center">
-  <img src="figures/network_structure.png" width="100%">
+  <img src="https://github.com/user-attachments/assets/d9865e28-733c-4257-b53c-221e8ca4249d" alt="Overall architecture of PMFM" width="539">
 </p>
+
 
 
 <p align="center">
@@ -210,109 +211,101 @@ pip install -r requirements.txt
 
 # 🚀 Usage
 
+Run the following commands from the `PMFM/` directory.
 
 ## 1. Dataset Preparation
 
-
 Prepare the HaN-Seg dataset:
 
-
-```
-datasets/
-└── hanseg/
-    ├── images/
-    └── labels/
-```
-
-
-Modify the dataset path in:
-
-
-```
-config/hanseg.yaml
+```text
+HaN-Seg/
+└── set_1/
+    ├── case_01/
+    ├── case_02/
+    └── ...
 ```
 
+Set the dataset path using `--raw` and run:
 
+```bash
+python preprocess/nanseg_slices_v2.py --raw "path/to/HaN-Seg/set_1" --out data
+```
+
+The training data paths are configured in `config/nanseg.yaml`.
 
 ---
 
 ## 2. Training
 
-
 Run:
-
 
 ```bash
 python trainNanSegV4.py
 ```
 
-
 ---
 
 ## 3. Evaluation
 
-
-The evaluation metrics are implemented in:
-
+The 3D evaluation metrics are implemented in:
 
 ```text
-loss/
-└── metrics.py
+evaluation/
+└── hanseg_metrics.py
 ```
 
-
 The evaluation includes:
-
 
 - Dice coefficient (Dice)
 - 95% Hausdorff distance (HD95)
 
+Run:
 
-The trained model can be evaluated using the provided evaluation functions.
-The evaluation settings can be modified according to the experimental requirements.
+```bash
+python evaluate_full_grid.py 
 ```
-
 
 ---
 
 # 📂 Repository Structure
 
-
 ```text
-PMFM
-│
-├── config
-│   └── nanseg.yaml
-│
-├── datasets
-│   └── nanseg
-│       ├── images
-│       └── labels
-│
-├── loss
-│   ├── loss.py
-│   ├── metrics.py
-│   └── __init__.py
-│
-├── model
-│   ├── PFF.py
-│   ├── PFFUNet.py
-│   ├── pointnet.py
-│   ├── unet2d.py
-│   ├── builder_model.py
-│   └── __init__.py
-│
-├── optimizer
-│   ├── builder_optimizer.py
-│   ├── builder_lr_scheduler.py
-│   └── __init__.py
-│
-├── utils
-│
-├── trainNanSegV4.py
-│
-├── requirements.txt
-│
+.
+├── PMFM/
+│   ├── config/
+│   │   └── nanseg.yaml
+│   ├── datasets/
+│   │   ├── __init__.py
+│   │   └── nanseg/
+│   │       ├── __init__.py
+│   │       ├── train_dataset.py
+│   │       └── val_dataset.py
+│   ├── evaluation/
+│   │   ├── __init__.py
+│   │   └── hanseg_metrics.py
+│   ├── loss/
+│   │   ├── __init__.py
+│   │   ├── loss.py
+│   │   └── metrics.py
+│   ├── model/
+│   │   ├── __init__.py
+│   │   ├── PFF.py
+│   │   ├── PFFUNet.py
+│   │   ├── builder_model.py
+│   │   ├── pointnet.py
+│   │   └── unet2d.py
+│   ├── optimizer/
+│   │   ├── __init__.py
+│   │   ├── builder_lr_scheduler.py
+│   │   └── builder_optimizer.py
+│   ├── preprocess/
+│   │   ├── __init__.py
+│   │   ├── nanseg_slices_v2.py
+│   │   └── news_numpy_output.py
+│   ├── utils/
+│   ├── evaluate_full_grid.py
+│   ├── requirements.txt
+│   └── trainNanSegV4.py
 └── README.md
 
 ```
