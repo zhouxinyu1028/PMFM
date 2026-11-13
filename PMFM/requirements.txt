@@ -11,6 +11,3 @@ Pillow>=10.0
 scipy>=1.10
 matplotlib>=3.7
 
-# Optional: colored console logs and point-cloud visualization.
-colorlog>=6.7
-# open3d>=0.17
