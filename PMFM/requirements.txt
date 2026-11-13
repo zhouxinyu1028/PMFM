@@ -1,6 +1,0 @@
-colorlog
-medpy
-numpy
-PyYAML
-torch
-tqdm
