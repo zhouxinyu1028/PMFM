@@ -22,12 +22,7 @@ def show_pointCloud(point):
 
 
 def point_distribution(point, target_dis):
-    """
-    判断点是否距离原点比较集中
-    :param point: (n, 3)
-    :param target_dis: 参考距离
-    :return:
-    """
+
     point = torch.from_numpy(point)
     total_point_number = point.shape[0]  # 总共的点数
     point_dis = point.pow(2).sum(dim=-1)  # 求距离0点的公式，不带根号
