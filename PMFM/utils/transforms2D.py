@@ -1,6 +1,4 @@
-"""
-数据增强 2D
-"""
+
 import torch
 import numpy as np
 import math
