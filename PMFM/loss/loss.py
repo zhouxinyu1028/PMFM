@@ -46,7 +46,7 @@ class ELDiceLoss(nn.Module):
                         target[:, i].pow(2).sum(dim=1).sum(dim=1).sum(dim=1) + smooth)
 
         dice = dice / pred.size(1)
-        # 返回的是dice距离
+
         return torch.clamp((torch.pow(-torch.log(dice + 1e-5), 0.3)).mean(), 0, 2)
 
 
