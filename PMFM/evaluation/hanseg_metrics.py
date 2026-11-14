@@ -33,6 +33,7 @@ STATUS_EMPTY_PREDICTION = 'empty_prediction'
 class CaseMetrics:
 
 
+    
 
 
     dice: float
