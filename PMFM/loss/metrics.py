@@ -8,6 +8,7 @@ from utils.dice_score import dice_loss, multiclass_dice_coeff
 class LossAverage(object):
 
 
+    
 
     def __init__(self):
         self.reset()
