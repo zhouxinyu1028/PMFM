@@ -9,8 +9,7 @@ import numpy as np
 import torch.nn.functional as F
 
 
-# T-Net: is a pointnet itself.获取3x3的变换矩阵，校正点云姿态；效果一般，后续的改进并没有再加入这部分
-# 经过全连接层映射到9个数据，最后调整为3x3矩阵
+
 class STN3d(nn.Module):
     def __init__(self, isGroupNorm=False, num_gropus=32):
         super(STN3d, self).__init__()
