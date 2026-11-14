@@ -1,5 +1,3 @@
-# 学习率调整器
-
 import torch.optim.lr_scheduler as lr_scheduler
 
 
