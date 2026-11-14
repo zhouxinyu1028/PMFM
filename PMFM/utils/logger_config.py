@@ -5,6 +5,7 @@ except ImportError:
     colorlog = None
 
 
+
 def logger_config(format, level=logging.INFO):
     # 创建logger对象
     logger = logging.getLogger()
