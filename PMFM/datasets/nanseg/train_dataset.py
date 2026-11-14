@@ -5,8 +5,7 @@ from torch.utils.data import Dataset as dataset
 from pathlib import Path
 from utils.transforms2D import Compose, RandomFlip_LR, RandomFlip_UD, Crop, RandomRotate, Resize
 import logging
-
-
+ 
 def load_image_pair(data, data_dir):
     """
         图像与标签分文件存放时（图像只存一份在 slices/ 下），按样本里的 image_path 去读；
