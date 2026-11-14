@@ -36,11 +36,8 @@ class ImageToPointCloud(nn.Module):
         self.png_size = png_size
 
     def getRandomColor(self, point):
-        """
-            给点云数据随机产生一种颜色
-        :param point: (point_number, 3)
-        :return:
-        """
+
+        
         r = random.randint(0, 255) / 255
         g = random.randint(0, 255) / 255
         b = random.randint(0, 255) / 255
