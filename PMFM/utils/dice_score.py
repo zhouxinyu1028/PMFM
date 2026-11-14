@@ -3,7 +3,7 @@ from torch import Tensor
 
 
 def dice_coeff(input: Tensor, target: Tensor, reduce_batch_first: bool = False, epsilon: float = 1e-6):
-    # 所有batches或单个mask的Dice系数的平均值
+
     assert input.size() == target.size()
     assert input.dim() == 3 or not reduce_batch_first
     sum_dim = (-1, -2) if input.dim() == 2 or not reduce_batch_first else (-1, -2, -3)
