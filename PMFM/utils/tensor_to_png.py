@@ -12,11 +12,7 @@ import torch.nn.functional as F
 
 
 def TensorToPng(tensor, png_path, name):
-    """
-    :param tensor: (batch_size, c, w, h)
-    :param png_path:
-    :return:
-    """
+ 
     tensor1 = tensor.clone()
     fileList = os.listdir(png_path)
     for fileName in fileList:
