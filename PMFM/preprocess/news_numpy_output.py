@@ -125,7 +125,6 @@ class HaNSegSliceWriter:
             writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
             writer.writeheader()
             writer.writerows(rows)
-        print(f'配准/覆盖情况已写入 {path}')
 
     def process_case(self, case_dir):
         ct = sitk.ReadImage(str(next(case_dir.glob('*_IMG_CT.nrrd'))))
@@ -156,7 +155,7 @@ class HaNSegSliceWriter:
             try:
                 transform, metric, stop = register_mr_to_ct(ct, mr, init_filter)
             except RuntimeError as exc:
-                print(f'  配准({init_name})失败: {exc}', flush=True)
+                print(f'  预处理步骤失败: {exc}', flush=True)
                 continue
             candidate = sitk.GetArrayFromImage(
                 sitk.Resample(mr, ct_resampled, transform, sitk.sitkLinear, 0.0, sitk.sitkFloat32))
