@@ -91,6 +91,7 @@ loss:
   - 0.2
   - 0.8
   focal_gamma: 2
+  
 labels:
 - A_Carotid_L
 - A_Carotid_R
