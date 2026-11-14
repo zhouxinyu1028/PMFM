@@ -208,30 +208,24 @@ pip install -r requirements.txt
 
 
 ---
-
 # 🚀 Usage
-
-Run the following commands from the `PMFM/` directory.
 
 ## 1. Dataset Preparation
 
 Prepare the HaN-Seg dataset:
 
 ```text
-HaN-Seg/
-└── set_1/
-    ├── case_01/
-    ├── case_02/
-    └── ...
+datasets/
+└── hanseg/
+    ├── images/
+    └── labels/
 ```
 
-Set the dataset path using `--raw` and run:
+Modify the dataset paths in:
 
-```bash
-python preprocess/nanseg_slices_v2.py --raw "path/to/HaN-Seg/set_1" --out data
+```text
+config/nanseg.yaml
 ```
-
-The training data paths are configured in `config/nanseg.yaml`.
 
 ---
 
