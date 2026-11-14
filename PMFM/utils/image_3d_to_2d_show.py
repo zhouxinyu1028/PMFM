@@ -1,4 +1,4 @@
-# 将3D图像切片为2D图像显示
+
 import torch
 import wandb
 from PIL import Image
