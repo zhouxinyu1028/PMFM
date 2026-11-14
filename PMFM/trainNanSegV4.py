@@ -28,7 +28,7 @@ from utils.image_3d_to_2d_show import nanseg_show_single
 from utils.load_yaml_file import read_yaml
 from utils.logger_config import logger_config
 
-# yaml配置路径：相对本文件定位，换机器/换目录后不会失效
+
 dir_yaml = Path(__file__).resolve().parent / 'config' / 'nanseg.yaml'
 yaml_data = read_yaml(dir_yaml)
 
