@@ -8,10 +8,7 @@ from utils.transforms2D import Compose, Resize, RandomFlip_LR, RandomFlip_UD, cr
 
 
 def load_image_pair(data, data_dir):
-    """
-        图像与标签分文件存放时（图像只存一份在 slices/ 下），按样本里的 image_path 去读；
-        兼容旧格式（样本 npz 内自带 images）
-    """
+ 
     if 'images' in data.files:
         return torch.from_numpy(data['images'][0]), torch.from_numpy(data['images'][1])
     images = np.load(Path(data_dir).parent.joinpath(str(data['image_path'])))['images']
