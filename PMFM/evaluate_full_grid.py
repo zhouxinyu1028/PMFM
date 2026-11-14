@@ -10,6 +10,7 @@ from contextlib import contextmanager
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
+
 import cv2
 import numpy as np
 import SimpleITK as sitk
